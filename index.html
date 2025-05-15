@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <link rel="stylesheet" href="estilos/style.css">
   <link rel="stylesheet" href="estilos/media-query.css">
   <title>Login</title>
@@ -21,28 +22,34 @@
         <!--Aqui vai o formulário-->
 
         <h2>Login</h2>
+        
         <p>Seja Bem-Vindo(a) novamente, faça login para acessar sua conta e manter-se atualizado</p>
 
         <form action="login.php" method="post" autocomplete="on">
 
-          <div>
+          <div class="campo">
 
-            <label for="iusuario">usuário:</label>
-            <input type="text" name="usuario" id="iusuario" placeholder="nome do usuário" autocomplete="username">
+            <span class="material-symbols-outlined">person</span>
+            <input type="email" name="login" id="ilogin" placeholder="endereço de e-mail" autocomplete="email" required maxlength="30">
+            <label for="ilogin" >email</label>
+
+          </div>
+
+          <div class="campo">
+
+            <span class="material-symbols-outlined">key</span>
+            <input type="password" name="senha" id="isenha" placeholder="sua senha" autocomplete="current-password" required minlength="6" maxlength="20">
+            
+            <label for="isenha">senha</label>
 
           </div>
 
           <div>
 
-            <label for="isenha">senha:</label>
-            <input type="password" name="senha" id="isenha" placeholder="senha" autocomplete="current-password">
-
-          </div>
-
-          <div>
-
-            <input id="botao" type="reset" value="Criar Conta">
             <input id="botao" type="submit" value="Entrar">
+            <a href="esqueci.html">
+              Esqueci a senha <i class="material-symbols-outlined">mail</i>
+            </a>
 
           </div>
 
